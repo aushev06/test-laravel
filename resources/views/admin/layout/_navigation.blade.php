@@ -7,11 +7,11 @@
             </a>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Бренды">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Марки">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBrands"
                data-parent="#Brands">
                 <i class="fa fa-book"></i>
-                <span class="nav-link-text">Бренды</span>
+                <span class="nav-link-text">Марки</span>
             </a>
 
             <ul class="sidenav-second-level collapse" id="collapseBrands">
@@ -23,6 +23,24 @@
                 </li>
             </ul>
         </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Модели">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseModels"
+               data-parent="#Models">
+                <i class="fa fa-book"></i>
+                <span class="nav-link-text">Модели</span>
+            </a>
+
+            <ul class="sidenav-second-level collapse" id="collapseModels">
+                <li>
+                    <a href="{{route('car-models.index')}}">Все</a>
+                </li>
+                <li>
+                    <a href="{{route('car-models.create')}}">Создать</a>
+                </li>
+            </ul>
+        </li>
+
     </ul>
 
 

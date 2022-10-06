@@ -15,16 +15,16 @@
                 <li class="breadcrumb-item">
                     <a href="{{route('admin.index')}}">Доска</a>
                 </li>
-                <li class="breadcrumb-item active">Марки</li>
+                <li class="breadcrumb-item active">Модели</li>
             </ol>
 
             <!-- /cards -->
             <h2></h2>
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
-                    <h2><i class="fa fa-fw fa-list"></i>Марки</h2>
+                    <h2><i class="fa fa-fw fa-list"></i>Модели</h2>
                     <div class="pull-right">
-                        <a href="{{route('brands.create')}}" class="btn badge-primary">Добавить</a>
+                        <a href="{{route('car-models.create')}}" class="btn badge-primary">Добавить</a>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
 
                         </thead>
                         <tbody id="sortable">
-                        @foreach($brands as $item)
+                        @foreach($models as $item)
                             <tr data-id="{{$item->id}}">
                                 <td>
                                     {{$item->id}}
@@ -48,12 +48,12 @@
                                     {{$item->name}}
                                 </td>
                                 <td>
-                                    <a href="{{route('brands.show', $item->id)}}"><i
+                                    <a href="{{route('car-models.show', $item->id)}}"><i
                                             class="fa fa-fw fa-eye"></i></a>
-                                    <a href="{{route('brands.edit', $item->id)}}"><i
+                                    <a href="{{route('car-models.edit', $item->id)}}"><i
                                             class="fa fa-fw fa-edit"></i></a>
                                     <form style="display: inline"
-                                          action="{{ route('brands.destroy' , $item->id)}}" method="POST"
+                                          action="{{ route('car-models.destroy' , $item->id)}}" method="POST"
                                           class="{{"form-" . $item->id}}">
                                         {!! method_field('DELETE') !!}
                                         @csrf
@@ -68,7 +68,7 @@
                         </tbody>
                     </table>
 
-                    {{$brands->links()}}
+                    {{$models->links()}}
                 </div>
 
             </div>

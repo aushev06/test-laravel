@@ -1,3 +1,10 @@
+<?php
+/**
+ * @var \App\Models\CarModel $model
+ */
+
+?>
+
 @extends('admin.layout.main')
 
 @section('content')
@@ -6,10 +13,10 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="{{route('brands.index')}}">Марки</a>
+                    <a href="{{route('car-models.index')}}">Модели</a>
                 </li>
 
-                <li class="breadcrumb-item active">{{$brand->name}}</li>
+                <li class="breadcrumb-item active">{{$model->name}}</li>
             </ol>
 
             <!-- /cards -->
@@ -24,7 +31,12 @@
                         <table class="table">
                             <tr>
                                 <th>Название</th>
-                                <td>{{$brand->name}}</td>
+                                <td>{{$model->name}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Марка</th>
+                                <td>{{$model->brand->name}}</td>
                             </tr>
                         </table>
                     </div>

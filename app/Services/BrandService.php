@@ -24,4 +24,9 @@ class BrandService
 
         return $brand;
     }
+
+    public function getAll()
+    {
+        return Brand::query()->get();
+    }
 }
