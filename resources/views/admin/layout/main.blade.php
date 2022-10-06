@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Aushev">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Jroo - Админ панель</title>
+    <title>Админ панель</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="{{ asset('admin_assets/img/favicon.ico')}}" type="image/x-icon">
