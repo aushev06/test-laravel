@@ -16,3 +16,7 @@
 Данные для админки:
 test@test.ru
 password
+
+
+
+Скринкаст того, что получилось - https://drive.google.com/file/d/1nhgDehhyKC1sMCTiXY2bOjGL60xWYy-k/view

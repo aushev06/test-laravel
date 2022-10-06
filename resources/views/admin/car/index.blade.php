@@ -24,6 +24,10 @@ use App\Http\Controllers\Admin\OrderController as Controller;
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
                     <h2><i class="fa fa-fw fa-list"></i>Автомобили</h2>
+
+                    <div class="pull-right">
+                        <a href="{{route('cars.create')}}" class="btn badge-primary">Добавить</a>
+                    </div>
                 </div>
 
                 <div class="list_general">
