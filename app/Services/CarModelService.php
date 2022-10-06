@@ -24,4 +24,9 @@ class CarModelService
 
         return $carModel;
     }
+
+    public function getAll()
+    {
+        return CarModel::query()->get();
+    }
 }

@@ -34,6 +34,7 @@
                         <tr>
                             <th>#</th>
                             <th>Название</th>
+                            <th>Марка</th>
                             <th>Действие</th>
                         </tr>
 
@@ -46,6 +47,10 @@
                                 </td>
                                 <td>
                                     {{$item->name}}
+                                </td>
+
+                                <td>
+                                    {{$item->brand->name}}
                                 </td>
                                 <td>
                                     <a href="{{route('car-models.show', $item->id)}}"><i

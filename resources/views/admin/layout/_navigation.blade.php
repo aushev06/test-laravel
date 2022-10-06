@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/admin">
                 <i class="fa fa-fw fa-dashboard"></i>
                 <span class="nav-link-text">Доска</span>
             </a>
@@ -37,6 +37,23 @@
                 </li>
                 <li>
                     <a href="{{route('car-models.create')}}">Создать</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Автомобили">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCars"
+               data-parent="#Cars">
+                <i class="fa fa-book"></i>
+                <span class="nav-link-text">Автомобили</span>
+            </a>
+
+            <ul class="sidenav-second-level collapse" id="collapseCars">
+                <li>
+                    <a href="{{route('cars.index')}}">Все</a>
+                </li>
+                <li>
+                    <a href="{{route('cars.create')}}">Создать</a>
                 </li>
             </ul>
         </li>

@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('img');
             $table->string('color');
             $table->string('state_number');
             $table->string('transmission');
-            $table->string('rental_price');
+            $table->float('rental_price');
             $table->date('release_year');
             $table->unsignedInteger('car_model_id');
             $table->timestamps();

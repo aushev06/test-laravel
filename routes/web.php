@@ -14,20 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.index');
+    return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/admin/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('/admin/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
 
     Route::resources(
         [
             'brands' => \App\Http\Controllers\Admin\BrandController::class,
             'car-models' => \App\Http\Controllers\Admin\CarModelController::class,
+            'cars' => \App\Http\Controllers\Admin\CarController::class,
         ]
     );
 });

@@ -1,4 +1,10 @@
+<?php
+/**
+ * @var \App\Models\Car $model
+ */
+?>
 @extends('admin.layout.main')
+
 @section('content')
     <div class="content-wrapper">
         <div class="container-fluid">
@@ -23,14 +29,13 @@
             <h2></h2>
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
-                    <h2><i class="fa fa-plus"></i>Изменить</h2>
+                    <h2><i class="fa fa-plus"></i>Изменить категорию</h2>
                 </div>
-                <form method="post" action="{{route('car-models.update', $model->id)}}" class="create-form"
-                      enctype="multipart/form-data">
+                <form method="post" action="{{route('cars.update', $model->id)}}" class="create-form" enctype="multipart/form-data">
                     @csrf
                     @method('put')
 
-                    @include('admin.car-model._form', ['model' => $model, 'brands' => $brands])
+                    @include('admin.car._form', ['model' => $model])
                     <button class="btn badge-primary" type="submit">Сохранить</button>
                 </form>
             </div>
