@@ -9,7 +9,8 @@
   composer install --ignore-platform-reqs
 
 
-- И наконец, выполните - ./vendor/bin/sail up
+- Выполните - ./vendor/bin/sail up -d
+- Выполните - ./vendor/bin/sail migrate:fresh --seed
 - Сайт работает по адресу - http://localhost
 
 Данные для админки:
