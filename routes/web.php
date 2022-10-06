@@ -23,4 +23,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
+
+    Route::resources(
+        [
+            'brands' => \App\Http\Controllers\Admin\BrandController::class,
+            'car-models' => \App\Http\Controllers\Admin\CarModelController::class,
+        ]
+    );
 });

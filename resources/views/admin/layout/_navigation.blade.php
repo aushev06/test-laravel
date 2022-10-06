@@ -6,7 +6,25 @@
                 <span class="nav-link-text">Доска</span>
             </a>
         </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Бренды">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBrands"
+               data-parent="#Brands">
+                <i class="fa fa-book"></i>
+                <span class="nav-link-text">Бренды</span>
+            </a>
+
+            <ul class="sidenav-second-level collapse" id="collapseBrands">
+                <li>
+                    <a href="{{route('brands.index')}}">Все</a>
+                </li>
+                <li>
+                    <a href="{{route('brands.create')}}">Создать</a>
+                </li>
+            </ul>
+        </li>
     </ul>
+
 
 
     <ul class="navbar-nav sidenav-toggler">
